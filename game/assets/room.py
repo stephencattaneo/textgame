@@ -4,13 +4,24 @@ class Room(object):
   special_exit = None
   name = 'the same old room'
   flavor_text = 'just another room'
+  npcs = []
 
   def action(self, dm):
-    print(flavor_text)
+    dm.out(self.flavor_text)
+
+  def get_npc(self, npc_name):
+    for npc in self.npcs:
+      if npc.name == npc_name:
+        return npc
+
+    return None
+
+  def should_use_special_exit(self):
+    return False
 
 class Lobby(Room):
   name = 'the lobby'
-  flavor_text = 'The lobby.'
+  flavor_text = 'Welcome.'
   can_be_random = False
 
 class Exit(Room):
@@ -24,3 +35,14 @@ class Exit(Room):
 class IT(Room):
   name = 'The IT cube.'
   flavor_text = 'hell.'
+  exit_count_down = 3
+
+  def __init__(self):
+    self.special_exit = self
+
+  def action(self, dm):
+    self.exit_count_down -= 1
+    super(IT, self).action(dm)
+
+  def should_use_special_exit(self):
+    return self.exit_count_down > 0
