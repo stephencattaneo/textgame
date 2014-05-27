@@ -1,5 +1,6 @@
 import inspect
 from random import randint
+import sys
 
 from assets import *
 
@@ -8,58 +9,71 @@ class ExitGame(BaseException):
 
 class DungeonMaster(object):
   actions = {}
-  rooms = []
+  possible_rooms = []
+  all_rooms = {}
   items = {}
-  current_room = None
-  last_room = None
+  visited_rooms = []
   inventory = []
 
-  def __init__(self):
+
+  def __init__(self, debug_mode=False, out_stream=sys.stdout):
+    self.debug = debug_mode
+    self.out_stream = out_stream
+
     # Cache up the possible actions.
     def append_actions(self, obj):
-        for key in obj.command():
-          self.actions[key] = obj
+      if obj.debug_only and not self.debug: return
+
+      for key in obj.command():
+        self.actions[key] = obj
     self.cache_asset(action, append_actions)
 
     # cache the random rooms.
     def append_rooms(self, obj):
       if obj.can_be_random:
-          self.rooms.append(obj)
+        self.possible_rooms.append(obj)
+      self.all_rooms[obj.__name__.lower()] = obj
     self.cache_asset(room, append_rooms)
 
     # cache the items.
     def append_items(self, obj):
       self.items[obj.name] = obj
-    self.cache_asset(self, item)
+    self.cache_asset(item, append_items)
 
+  def start(self):
     # enter the lobby to start the game.
     action.EnterRoom().do(self, room=room.Lobby())
 
   def do_action(self, cmd):
     if not cmd: return
-
-    cmd = cmd.lower().split(' ')
-    action = self.actions[cmd[0]]()
+    try:
+      cmd = cmd.lower().split(' ')
+      action = self.actions[cmd[0]]()
     
-    if not action:
+    except (KeyError):
       print "Unknown command. Type 'help' for a list of available commands."
       return
 
     action.do(self, cmd)
 
   def room_change(self, new_room):
-    self.last_room = self.current_room
-    self.current_room = new_room
+    self.visited_rooms.append(new_room)
+
+  def get_current_room(self):
+    return self.visited_rooms[-1]
 
   def random_room(self):
-    return self.rooms[randint(0, len(self.rooms) - 1)]()
+    return self.possible_rooms[randint(0, len(self.possible_rooms) - 1)]()
 
   def exit_game(self):
     raise ExitGame()
 
   def cache_asset(self, root_class, func):
     for name, obj in inspect.getmembers(root_class):
-      if inspect.isclass(obj): func(obj)
+      if inspect.isclass(obj): func(self, obj)
 
-if __name__ == '__main__':
-  dm = DungeonMaster()
+  def out(self, msg):
+    self.out_stream.write(msg + '\n')
+
+  def log(self, msg):
+    if self.debug: self.out(msg)
