@@ -9,9 +9,8 @@ class Game(object):
   DEBUG_MODE = True
 
   def run(self):
-    gm = dungeon_master.DungeonMaster()
-
-    print('Welcome.')
+    gm = dungeon_master.DungeonMaster(self.DEBUG_MODE)
+    gm.start()
 
     while (True):
       try:
@@ -19,18 +18,22 @@ class Game(object):
         print('\n')
         if self.DEBUG_MODE and cmd == 'quit': 
           print('Goodbye. (debug quit)')
-          break
+          raise dungeon_master.ExitGame
 
         gm.do_action(cmd)
       
       except (EOFError, KeyboardInterrupt):
-        print('nope. >:D ')
+        if self.DEBUG_MODE:
+          print('exit game!')
+          break
+        else:
+          print('nope. >:D ')
 
-      except dungeon_master.ExitGame:
-        print 'exit game!'
+      except (dungeon_master.ExitGame):
+        print('exit game!')
         break
 
 
- # if __name__ == '__main__':
- #   g = Game()
- #   g.run()
+if __name__ == '__main__':
+  g = Game()
+  g.run()
