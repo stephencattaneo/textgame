@@ -3,14 +3,12 @@
 import readline
 from game import *
 
-
-
 class Game(object):
   DEBUG_MODE = True
 
   def run(self):
-    gm = dungeon_master.DungeonMaster(self.DEBUG_MODE)
-    gm.start()
+    dm = dungeon_master.DungeonMaster(self.DEBUG_MODE)
+    dm.start()
 
     while (True):
       try:
@@ -20,7 +18,7 @@ class Game(object):
           print('Goodbye. (debug quit)')
           raise dungeon_master.ExitGame
 
-        gm.do_action(cmd)
+        dm.do_action(cmd)
       
       except (EOFError, KeyboardInterrupt):
         if self.DEBUG_MODE:

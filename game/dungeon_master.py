@@ -40,40 +40,49 @@ class DungeonMaster(object):
       self.items[obj.name] = obj
     self.cache_asset(item, append_items)
 
+
   def start(self):
     # enter the lobby to start the game.
-    action.EnterRoom().do(self, room=room.Lobby())
+    action.EnterRoom(dm=self).do(room=room.Lobby(dm=self))
+
 
   def do_action(self, cmd):
     if not cmd: return
     try:
       cmd = cmd.lower().split(' ')
-      action = self.actions[cmd[0]]()
+      action = self.actions[cmd[0]](dm=self)
     
     except (KeyError):
       print "Unknown command. Type 'help' for a list of available commands."
       return
 
-    action.do(self, cmd)
+    action.do(cmd)
+
 
   def room_change(self, new_room):
     self.visited_rooms.append(new_room)
 
+
   def get_current_room(self):
     return self.visited_rooms[-1]
 
+
   def random_room(self):
-    return self.possible_rooms[randint(0, len(self.possible_rooms) - 1)]()
+    return self.possible_rooms[randint(0, len(self.possible_rooms) - 1)](dm=self)
+
 
   def exit_game(self):
     raise ExitGame()
+
 
   def cache_asset(self, root_class, func):
     for name, obj in inspect.getmembers(root_class):
       if inspect.isclass(obj): func(self, obj)
 
+
   def out(self, msg):
     self.out_stream.write(msg + '\n')
+
 
   def log(self, msg):
     if self.debug: self.out(msg)

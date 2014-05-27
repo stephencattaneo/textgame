@@ -1,11 +1,15 @@
-class Item(object): 
+class Item(object):
   name = 'thing'
+  attributes = {}
+
+  def __init__(self, **kwargs):
+    self.dm = kwargs['dm']
 
   def __str__(self):
-    print(self.name)
+    self.dm.out(self.__class__.__name__.lower())
   
   def noop(self):
-    print("that doesn't seem to do anything")
+    self.dm.out("that doesn't seem to do anything")
   
   def apply(self, **kwargs):
     self.noop()    
@@ -17,4 +21,15 @@ class Item(object):
     self.noop()
 
 class Stick(Item):
-  name = 'stick'
+  pass
+
+class Rope(Item):
+  pass
+
+class Edible(Item):
+  def __init__(self, **kwargs):
+    super(Edible, self).__init__(**kwargs)
+    self.attributes['edible'] = True
+
+class Apple(Edible):
+  pass
