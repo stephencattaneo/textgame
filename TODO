@@ -1,5 +1,6 @@
-1. be able to walk between rooms
-2. help text
-3. character
+0. tests
+1. character
 3. character inventory - list inventory
 4. be able to do actions: pickup <a>, drop <b>, apply <a> <b>, 
+6. repalce "if dm.debug: print*" with propper logger functionality
+7. break other classes accessing arrays and dicts of dm; should use accessors instead
