@@ -1,3 +1,4 @@
+from random import randint
 
 class Room(object):
   items = []
@@ -20,6 +21,9 @@ class Room(object):
 
   def generate_items(self):
     if not self.can_have_items: return
+
+    # 33% chance of anything dropping.
+    if randint(1,3) % 3 == 0: return
 
     '''
     From http://gamedev.stackexchange.com/questions/6043/algorithm-for-determining-random-events
@@ -58,8 +62,7 @@ class Room(object):
 
 class Lobby(Room):
   name = 'the lobby'
-  flavor_text = 'Welcome.'
-  can_be_random = False
+  flavor_text = 'The secretary does not look up from her computer.'
 
 class Exit(Room):
   name = 'the dungeon exit'
@@ -71,8 +74,8 @@ class Exit(Room):
     self.dm.exit_game()
 
 class IT(Room):
-  name = 'The IT cube.'
-  flavor_text = 'hell.'
+  name = 'the IT cube.'
+  flavor_text = '''You feel as though you've entered some form of purgatory.'''
   exit_count_down = 3
 
   def __init__(self, **kwargs):
@@ -85,3 +88,19 @@ class IT(Room):
 
   def should_use_special_exit(self):
     return self.exit_count_down > 0
+
+class Kitchen(Room):
+  name =  'lunch room.'
+  flavor_text = 'The smell of stale coffe fills the air.'
+
+class Gym(Room):
+  name = 'workout room.'
+  flavor_text = 'The room is full of broken work out machines.'
+
+class Server(Room):
+  name = 'server room.'
+  flavor_text = 'computers and wires everywhere, the sound of whiring fans fills the air.'
+
+class Meeting(Room):
+  name = 'a meeting room.'
+  flavor_text = 'At the center of the room is a table surround by chairs.'
