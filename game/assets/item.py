@@ -1,12 +1,14 @@
 class Item(object):
   name = 'thing'
   attributes = {}
+  spawn_weight = 0
 
   def __init__(self, **kwargs):
     self.dm = kwargs['dm']
+    self.name = self.__class__.__name__.lower()
 
   def __str__(self):
-    self.dm.out(self.__class__.__name__.lower())
+    self.dm.out(self.name)
   
   def noop(self):
     self.dm.out("that doesn't seem to do anything")
@@ -21,10 +23,11 @@ class Item(object):
     self.noop()
 
 class Stick(Item):
-  pass
+  spawn_weight = 5
 
 class Rope(Item):
-  pass
+  spawn_weight = 1
+
 
 class Edible(Item):
   def __init__(self, **kwargs):
@@ -32,4 +35,7 @@ class Edible(Item):
     self.attributes['edible'] = True
 
 class Apple(Edible):
-  pass
+  spawn_weight = 3
+
+class BlockOCheese(Edible):
+  spawn_weight = 2

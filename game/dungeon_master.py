@@ -12,6 +12,7 @@ class DungeonMaster(object):
   possible_rooms = []
   all_rooms = {}
   items = {}
+  total_item_weight = 0
   visited_rooms = []
   inventory = []
 
@@ -38,6 +39,7 @@ class DungeonMaster(object):
     # cache the items.
     def append_items(self, obj):
       self.items[obj.name] = obj
+      self.total_item_weight = self.total_item_weight + obj.spawn_weight
     self.cache_asset(item, append_items)
 
 
