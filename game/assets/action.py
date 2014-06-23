@@ -41,7 +41,7 @@ class EnterRoom(Action):
 class Help(Action):
   @staticmethod
   def command():
-    return ['help']
+    return ['help', '?']
 
   def do(self, args=None, **kwargs):
     cmds = ' '.join(self.dm.actions.keys())
@@ -62,7 +62,7 @@ class Talk(Action):
     return ['talk']
 
   def do(self, args=None, **kwargs):
-    target = args[1] 
+    target = args[1]
 
     if target == 'me':
       self.dm.out('You talk to yourself.  Crazy Person.')
@@ -112,9 +112,19 @@ class PickupItem(ItemAction):
   def command():
     return ['pickup']
 
-class GoTo(Action):
+class DebugAction(Action):
   debug_only = True
 
+  def debug_obj(self, obj):
+    pprint(obj, stream=self.dm.out_stream)
+    hidden_regex = re.compile('^__*')
+    for attr in dir(obj):
+      if hidden_regex.match(attr): continue
+      value = getattr(obj, attr)
+      printed_value = '<function>' if hasattr(value, '__call__') else value
+      pprint((attr, printed_value), stream=self.dm.out_stream)
+
+class GoTo(DebugAction):
   @staticmethod
   def command():
     return ['goto']
@@ -130,21 +140,20 @@ class GoTo(Action):
       for rm in self.dm.all_rooms.keys():
         self.dm.out("* %s" % rm)
 
-class RoomInfo(Action):
-  debug_only = True
-
+class RoomInfo(DebugAction):
   @staticmethod
   def command():
     return ['roominfo']
 
   def do(self, args=None, **kwargs):
-    room = self.dm.get_current_room()
-    pprint(room, stream=self.dm.out_stream)
-    regex = re.compile('^__*')
-    for attr in dir(room):
-      if regex.match(attr): continue
-      value = getattr(room, attr)
-      printed_value = '<function>' if hasattr(value, '__call__') else value
-      pprint((attr, printed_value), stream=self.dm.out_stream)
+    self.debug_obj(self.dm.get_current_room())
+
+class DMStatus(DebugAction):
+  @staticmethod
+  def command():
+    return ['dmstatus']
+
+  def do(self, args=None, **kwargs):
+    self.debug_obj(self.dm)
 
 
