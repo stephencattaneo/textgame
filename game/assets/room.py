@@ -12,7 +12,7 @@ class Room(object):
 
   def __init__(self, **kwargs):
     self.dm = kwargs['dm']
-    self.chance = kwargs['chance'] if 'chance' in kwargs else self.chance
+    self.chance = int(kwargs['chance']) if 'chance' in kwargs else self.chance
 
   def action(self):
     self.dm.out(self.flavor_text)
@@ -55,10 +55,11 @@ class Room(object):
     for count in range(randint(1, 2)):
       R = randint(0, self.dm.total_item_weight - 1)
       T = 0
-      for I in self.dm.items:
+      for item_name in self.dm.items:
+        I = self.dm.items[item_name]
         T = T + I.spawn_weight
         if T > R:
-          self.items.append(I())
+          self.items.append(I(dm=self.dm))
           break
 
   def get_npc(self, npc_name):
@@ -79,6 +80,7 @@ class Exit(Room):
   name = 'the dungeon exit'
   flavor_text = 'light at the end of the tunnel ... you walk towards the light.'
   can_have_items = False
+  can_be_random = False
 
   def action(self):
     super(Exit, self).action()
@@ -102,7 +104,7 @@ class IT(Room):
 
 class Kitchen(Room):
   name =  'lunch room.'
-  flavor_text = 'The smell of stale coffe fills the air.'
+  flavor_text = 'The smell of stale coffee fills the air.'
 
 class Gym(Room):
   name = 'workout room.'

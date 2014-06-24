@@ -16,7 +16,6 @@ class DungeonMaster(object):
   visited_rooms = []
   inventory = []
 
-
   def __init__(self, debug_mode=False, out_stream=sys.stdout):
     self.debug = debug_mode
     self.out_stream = out_stream
@@ -38,7 +37,7 @@ class DungeonMaster(object):
 
     # cache the items.
     def append_items(self, obj):
-      self.items[obj.name] = obj
+      self.items[obj.__name__.lower()] = obj
       self.total_item_weight = self.total_item_weight + obj.spawn_weight
     self.cache_asset(item, append_items)
 
@@ -53,7 +52,7 @@ class DungeonMaster(object):
     try:
       cmd = cmd.lower().split(' ')
       action = self.actions[cmd[0]](dm=self)
-    
+
     except (KeyError):
       print "Unknown command. Type 'help' for a list of available commands."
       return
@@ -65,7 +64,7 @@ class DungeonMaster(object):
     self.visited_rooms.append(new_room)
 
 
-  def get_current_room(self):
+  def current_room(self):
     return self.visited_rooms[-1]
 
 

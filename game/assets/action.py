@@ -28,8 +28,8 @@ class EnterRoom(Action):
   def do(self, args=None, **kwargs):
     if 'room' in kwargs:
       room = kwargs['room']
-    elif self.dm.get_current_room().should_use_special_exit():
-      room = self.dm.get_current_room().special_exit
+    elif self.dm.current_room().should_use_special_exit():
+      room = self.dm.current_room().special_exit
     else:
       room = self.dm.random_room()
 
@@ -47,14 +47,17 @@ class Help(Action):
     cmds = ' '.join(self.dm.actions.keys())
     self.dm.out("available commands: %s" % cmds)
 
-class ListInventory(Action):
+class Inventory(Action):
   @staticmethod
   def command():
     return ['inventory']
 
   def do(self, args=None, **kwargs):
-    for item in self.dm.inventory:
-      self.dm.out(item)
+    self.dm.out("Things in your inventory:")
+    for i in xrange(str(self.dm.inventory)):
+      self.dm.out(
+        '%d) %s' % (i, str(self.dm.inventory[i]))
+      )
 
 class Talk(Action):
   @staticmethod
@@ -75,7 +78,7 @@ class Talk(Action):
         '''There is no one by that name'''
 
 class ItemAction(Action):
-   def do(self, args=None, **kwargs):
+  def do(self, args=None, **kwargs):
     item_name = args[1]
 
     item = None
@@ -87,9 +90,12 @@ class ItemAction(Action):
     if not item:
       self.dm.out('no such item')
     else:
-      getattr(item, self.action) ()
+      self.execute(item)
 
-class UseItem(ItemAction):
+  def execute(self, item):
+    getattr(item, self.__class__.__name__.lower()) ()
+
+class Use(ItemAction):
   #XXX refactor static method to class method
   # then we can further refactor these classes to 2 lines...
   action = 'use'
@@ -98,19 +104,49 @@ class UseItem(ItemAction):
   def command():
     return ['use']
 
-class ApplyItem(ItemAction):
+class Apply(ItemAction):
   action = 'apply'
 
   @staticmethod
   def command():
     return ['apply']
 
-class PickupItem(ItemAction):
+class Pickup(ItemAction):
   action = 'pickup'
 
   @staticmethod
   def command():
     return ['pickup']
+
+  def do(self, args=None, **kwargs):
+    item_name = args[1]
+
+    item = None
+    for inv_item in self.dm.current_room().items:
+      if inv_item.name == item_name:
+        item = inv_item
+        break
+
+    if not item:
+      self.dm.out('no such item')
+    else:
+      self.execute(item)
+
+  def execute(self, item):
+    items = self.dm.current_room().items
+    for i in xrange(len(items)):
+      inv_item = items[i]
+      if inv_item == item:
+        del items[i]
+        break
+    self.dm.inventory.append(item)
+    self.dm.out('You pick up the %s.' % item)
+
+class Eat(ItemAction):
+  @staticmethod
+  def command():
+    return ['eat']
+
 
 class DebugAction(Action):
   debug_only = True
@@ -133,7 +169,14 @@ class GoTo(DebugAction):
     room_name = args[1].lower()
     try:
       room = self.dm.all_rooms[room_name]
-      EnterRoom(dm=self.dm).do(room=room(dm=self.dm))
+
+      room_args = {'dm': self.dm}
+      # any additional parts of the input command should become
+      # part of kwargs to the room object.
+      for i in xrange(0, len(args[2:]), 2):
+        room_args[args[2+i]] = args[3+i]
+
+      EnterRoom(dm=self.dm).do(room=room(**room_args))
     except (KeyError):
       self.dm.out("Unknown room: '%s'." % room_name)
       self.dm.out("Possible rooms:")

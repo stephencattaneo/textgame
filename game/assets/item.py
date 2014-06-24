@@ -1,5 +1,4 @@
 class Item(object):
-  name = 'thing'
   attributes = {}
   spawn_weight = 0
 
@@ -8,13 +7,13 @@ class Item(object):
     self.name = self.__class__.__name__.lower()
 
   def __str__(self):
-    self.dm.out(self.name)
-  
+    return self.name
+
   def noop(self):
     self.dm.out("that doesn't seem to do anything")
-  
+
   def apply(self, **kwargs):
-    self.noop()    
+    self.noop()
 
   def use(self, **kwargs):
     self.noop()
@@ -33,6 +32,9 @@ class Edible(Item):
   def __init__(self, **kwargs):
     super(Edible, self).__init__(**kwargs)
     self.attributes['edible'] = True
+
+  def eat(self, **kwargs):
+    self.dm.out('You eat the %s. Mmmmmmmmmm sooo good.' % self.__class__.__name__)
 
 class Apple(Edible):
   spawn_weight = 3
