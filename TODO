@@ -1,6 +1,8 @@
 0. tests
 1. character
 3. character inventory - list inventory
-4. be able to do actions: pickup <a>, drop <b>, apply <a> <b>, 
+4. be able to do actions: pickup <a>, drop <b>, apply <a> <b>,
 6. repalce "if dm.debug: print*" with propper logger functionality
 7. break other classes accessing arrays and dicts of dm; should use accessors instead
+8. make it so only certain rooms can spawn certain items
+9. collected items should be combined a special way to build a super item that allows access to the exit.
