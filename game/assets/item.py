@@ -1,25 +1,4 @@
-class Item(object):
-  attributes = {}
-  spawn_weight = 0
-
-  def __init__(self, **kwargs):
-    self.dm = kwargs['dm']
-    self.name = self.__class__.__name__.lower()
-
-  def __str__(self):
-    return self.name
-
-  def noop(self):
-    self.dm.out("that doesn't seem to do anything")
-
-  def apply(self, **kwargs):
-    self.noop()
-
-  def use(self, **kwargs):
-    self.noop()
-
-  def eat(self, **kwargs):
-    self.noop()
+from base import Item
 
 class Stick(Item):
   spawn_weight = 5

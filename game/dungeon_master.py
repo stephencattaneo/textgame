@@ -54,7 +54,7 @@ class DungeonMaster(object):
       action = self.actions[cmd[0]](dm=self)
 
     except (KeyError):
-      print "Unknown command. Type 'help' for a list of available commands."
+      self.out("Unknown command. Type 'help' for a list of available commands.")
       return
 
     action.do(cmd)

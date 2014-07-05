@@ -1,24 +1,7 @@
 
 from pprint import pprint
 import re
-
-
-class Action(object):
-  debug_only = False
-
-  def __init__(self, **kwargs):
-    self.dm = kwargs['dm']
-
-  @staticmethod
-  def command():
-    return []
-
-  def do(self, args=None, **kwargs):
-    self.dm.out('Why are you trying to call the base action?!?')
-
-  @classmethod
-  def help():
-    '''  '''
+from base import Action, ItemAction, DebugAction
 
 class EnterRoom(Action):
   @staticmethod
@@ -70,30 +53,14 @@ class Talk(Action):
     if target == 'me':
       self.dm.out('You talk to yourself.  Crazy Person.')
     else:
-      npc = self.dm.get_current_room().get_npc(target)
+      npc = self.dm.current_room().get_npc(target)
 
       if npc:
         npc.talk()
       else:
         '''There is no one by that name'''
 
-class ItemAction(Action):
-  def do(self, args=None, **kwargs):
-    item_name = args[1]
 
-    item = None
-    for inv_item in self.dm.inventory:
-      if inv_item.name == item_name:
-        item = inv_item
-        break
-
-    if not item:
-      self.dm.out('no such item')
-    else:
-      self.execute(item)
-
-  def execute(self, item):
-    getattr(item, self.__class__.__name__.lower()) ()
 
 class Use(ItemAction):
   #XXX refactor static method to class method
@@ -148,17 +115,7 @@ class Eat(ItemAction):
     return ['eat']
 
 
-class DebugAction(Action):
-  debug_only = True
 
-  def debug_obj(self, obj):
-    pprint(obj, stream=self.dm.out_stream)
-    hidden_regex = re.compile('^__*')
-    for attr in dir(obj):
-      if hidden_regex.match(attr): continue
-      value = getattr(obj, attr)
-      printed_value = '<function>' if hasattr(value, '__call__') else value
-      pprint((attr, printed_value), stream=self.dm.out_stream)
 
 class GoTo(DebugAction):
   @staticmethod
@@ -189,7 +146,7 @@ class RoomInfo(DebugAction):
     return ['roominfo']
 
   def do(self, args=None, **kwargs):
-    self.debug_obj(self.dm.get_current_room())
+    self.debug_obj(self.dm.current_room())
 
 class DMStatus(DebugAction):
   @staticmethod
