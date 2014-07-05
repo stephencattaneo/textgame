@@ -1,0 +1,1186 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"__",
+				"__name__"
+			],
+			[
+				"_",
+				"__name__"
+			],
+			[
+				"l",
+				"lower"
+			],
+			[
+				"inv",
+				"inventory"
+			],
+			[
+				"ite",
+				"item"
+			],
+			[
+				"room",
+				"room_args"
+			],
+			[
+				"de",
+				"debug_obj"
+			],
+			[
+				"a",
+				"assert"
+			],
+			[
+				"test",
+				"test_file"
+			],
+			[
+				"pro",
+				"process"
+			],
+			[
+				"p",
+				"process"
+			],
+			[
+				"fl",
+				"flavor_text"
+			],
+			[
+				"can_",
+				"can_have_items"
+			],
+			[
+				"get",
+				"get_current_room"
+			],
+			[
+				"out",
+				"out_stream"
+			],
+			[
+				"e",
+				"enter_room_action"
+			],
+			[
+				"E",
+				"ExitGame"
+			],
+			[
+				"clo",
+				"_closure_object"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"create",
+				"createDom"
+			],
+			[
+				"re",
+				"resource"
+			],
+			[
+				"App",
+				"Application"
+			],
+			[
+				"rally_",
+				"rally_token"
+			],
+			[
+				"rall",
+				"rally_file"
+			],
+			[
+				"Vulnab",
+				"vulnerability"
+			],
+			[
+				"arr",
+				"array"
+			],
+			[
+				"pivot_",
+				"pivot_index"
+			],
+			[
+				"un",
+				"unsorted"
+			],
+			[
+				"toy",
+				"toy_prices"
+			],
+			[
+				"stac",
+				"stack1"
+			],
+			[
+				"en",
+				"enqueue_popped"
+			],
+			[
+				"r",
+				"return"
+			],
+			[
+				"stack",
+				"stack2"
+			],
+			[
+				"sta",
+				"stack2"
+			],
+			[
+				"di",
+				"directory"
+			],
+			[
+				"std",
+				"stderr"
+			],
+			[
+				"exit_",
+				"exit_count_down"
+			],
+			[
+				"ca",
+				"cache"
+			],
+			[
+				"app",
+				"append_actions"
+			],
+			[
+				"item",
+				"item_name"
+			],
+			[
+				"in",
+				"inventory"
+			],
+			[
+				"rand",
+				"randint"
+			],
+			[
+				"if",
+				"ifmain	if __name__ == '__main__'"
+			],
+			[
+				"B",
+				"BaseAction"
+			],
+			[
+				"clas",
+				"className"
+			],
+			[
+				"mon",
+				"monthly_events"
+			],
+			[
+				"second",
+				"second_leg_label"
+			],
+			[
+				"first",
+				"first_leg_label"
+			],
+			[
+				"fi",
+				"first_leg"
+			],
+			[
+				"bef",
+				"before_noon"
+			],
+			[
+				"f",
+				"font-family"
+			],
+			[
+				"padd",
+				"padding-left"
+			],
+			[
+				"pa",
+				"padding-left"
+			],
+			[
+				"string",
+				"string"
+			],
+			[
+				"opt",
+				"option_select"
+			],
+			[
+				"time",
+				"time_select"
+			],
+			[
+				"len",
+				"length"
+			],
+			[
+				"s",
+				"script	Tag"
+			],
+			[
+				"op",
+				"option	Tag"
+			],
+			[
+				"display",
+				"display_div"
+			],
+			[
+				"dis",
+				"display_div"
+			],
+			[
+				"d",
+				"display"
+			],
+			[
+				"sec",
+				"second_leg_options"
+			],
+			[
+				"se",
+				"second_leg_options"
+			],
+			[
+				"firs",
+				"first_leg_options"
+			],
+			[
+				"first_l",
+				"first_leg_options"
+			],
+			[
+				"dat",
+				"Dateify"
+			],
+			[
+				"no",
+				"north_bound"
+			],
+			[
+				"json",
+				"JSONEncoder"
+			],
+			[
+				"stop",
+				"stop_id"
+			],
+			[
+				"padding",
+				"padding-top"
+			],
+			[
+				"i",
+				"italic"
+			],
+			[
+				"font",
+				"font-style"
+			],
+			[
+				"list",
+				"list-style-type"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"tech",
+				"technical_summary"
+			],
+			[
+				"font-",
+				"font-size"
+			],
+			[
+				"pad",
+				"padding-top"
+			],
+			[
+				"fon",
+				"font-weight"
+			],
+			[
+				"prof",
+				"prof_summary"
+			],
+			[
+				"eve",
+				"evnets"
+			],
+			[
+				"day",
+				"day_diff"
+			],
+			[
+				"day_",
+				"day_diff"
+			],
+			[
+				"Mult",
+				"isMultiDay"
+			],
+			[
+				"cal",
+				"cal"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"for",
+				"forEach"
+			],
+			[
+				"sha",
+				"shadow_events_"
+			],
+			[
+				"start",
+				"start_"
+			],
+			[
+				"end",
+				"end_date"
+			],
+			[
+				"last",
+				"lastTrDay"
+			],
+			[
+				"getDa",
+				"getDayWidth"
+			],
+			[
+				"Event",
+				"Event"
+			],
+			[
+				"is",
+				"isInDocument"
+			],
+			[
+				"event",
+				"events_"
+			],
+			[
+				"exi",
+				"exitDocument"
+			],
+			[
+				"y",
+				"y_offset_"
+			],
+			[
+				"getE",
+				"getEvents"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"new",
+				"newPosition"
+			],
+			[
+				"Eve",
+				"Event"
+			],
+			[
+				"o",
+				"overflow"
+			],
+			[
+				"tot",
+				"total_height"
+			],
+			[
+				"td_",
+				"td_height_buffer"
+			],
+			[
+				"td",
+				"td_height"
+			],
+			[
+				"pr",
+				"prototype"
+			],
+			[
+				"titl",
+				"title"
+			],
+			[
+				"getD",
+				"getDayWidth"
+			],
+			[
+				"to",
+				"total_width"
+			],
+			[
+				"st",
+				"style"
+			],
+			[
+				"month",
+				"month_"
+			],
+			[
+				"C",
+				"Calendar"
+			],
+			[
+				"tr_",
+				"tr_selector"
+			],
+			[
+				"Cre",
+				"CREATE_UPDATE"
+			],
+			[
+				"try",
+				"try	Try/Except"
+			],
+			[
+				"del",
+				"deleteEvent"
+			],
+			[
+				"DET",
+				"DELETE"
+			],
+			[
+				"Cont",
+				"Container"
+			],
+			[
+				"inpu",
+				"inputIsSane"
+			],
+			[
+				"m_ge",
+				"m_gen_filter_item"
+			],
+			[
+				"save",
+				"save_button_"
+			],
+			[
+				"even",
+				"EventType"
+			],
+			[
+				"comp",
+				"Component"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"group",
+				"group_list"
+			],
+			[
+				"disp",
+				"dispose"
+			],
+			[
+				"contn",
+				"content_"
+			],
+			[
+				"cont",
+				"content"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "game/dungeon_master.py",
+			"settings":
+			{
+				"buffer_size": 2029,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "game/assets/action.py",
+			"settings":
+			{
+				"buffer_size": 3486,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "game/assets/base.py",
+			"settings":
+			{
+				"buffer_size": 4032,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "game/assets/room.py",
+			"settings":
+			{
+				"buffer_size": 1257,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "game/assets/action_test.py",
+			"settings":
+			{
+				"buffer_size": 874,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "game/assets/item.py",
+			"settings":
+			{
+				"buffer_size": 432,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 118.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": true,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/scattaneo/Documents/DB_migration_notes.txt",
+		"/Users/scattaneo/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/scattaneo/Documents/zosk_talk.txt",
+		"/Users/scattaneo/Documents/zoosk_talk.txt",
+		"/Users/scattaneo/Documents/airwave-sc_UI_integration.txt",
+		"/Users/scattaneo/Documents/talk_with_UNC.txt",
+		"/Users/scattaneo/Documents/ChatWithIntel.txt",
+		"/Users/scattaneo/Dropbox/Workspace/closure_test_under_node/test_runner.js",
+		"/Users/scattaneo/Dropbox/Workspace/closure_test_under_node/sample_test.js",
+		"/Users/scattaneo/Dropbox/Workspace/closure_test_under_node/node_modules/awms/test/index.js",
+		"/Users/scattaneo/Dropbox/Workspace/closure_test_under_node/node_modules/awms/index.js",
+		"/Users/scattaneo/Dropbox/Workspace/closure_test_under_node/node_modules/closure-library/index.js",
+		"/Users/scattaneo/Dropbox/Workspace/node_modules/awms/test/index.js",
+		"/Users/scattaneo/Dropbox/Workspace/textgame/game/singleton.py",
+		"/Users/scattaneo/Dropbox/workspace/textgame/game/assets/room.py",
+		"/Users/scattaneo/Dropbox/workspace/textgame/game/assets/action_test.py",
+		"/Users/scattaneo/Dropbox/workspace/textgame/TODO",
+		"/Users/scattaneo/Dropbox/workspace/textgame/game/assets/action.py",
+		"/Users/scattaneo/Dropbox/workspace/textgame/game/dungeon_master.py",
+		"/Users/scattaneo/Dropbox/workspace/textgame/play_game.py",
+		"/Users/scattaneo/Dropbox/workspace/textgame/game/assets/npc.py",
+		"/Users/scattaneo/Dropbox/Workspace/textgame/game/assets/action_test.py",
+		"/Users/scattaneo/Dropbox/workspace/closure_plus_ember/src/table_maker.js",
+		"/Users/scattaneo/Documents/html5devconf_2014/syncing_async.txt",
+		"/Users/scattaneo/Dropbox/workspace/closure_plus_ember/app.js",
+		"/Users/scattaneo/Dropbox/Workspace/ember_starter_kit/js/app.js",
+		"/Users/scattaneo/fetch_vulns.py",
+		"/Users/scattaneo/Downloads/Yuwen_answers",
+		"/Users/scattaneo/Downloads/Yuwen Qin(answer).rar",
+		"/Users/scattaneo/Dropbox/workspace/algo_study/sorting_test.py",
+		"/Users/scattaneo/Dropbox/workspace/algo_study/sorting.py",
+		"/Users/scattaneo/Dropbox/workspace/algo_study/twitch.py",
+		"/Users/scattaneo/Dropbox/workspace/algo_study/twitch_test.py",
+		"/Users/scattaneo/Dropbox/workspace/coding_for_interviews/the_staqueue.txt",
+		"/Users/scattaneo/Dropbox/workspace/coding_for_interviews/the_staqueue_test.py",
+		"/Users/scattaneo/Dropbox/workspace/coding_for_interviews/the_staqueue.py",
+		"/Users/scattaneo/Dropbox/documents/Stephen_Cattaneo_Resume.html",
+		"/private/tmp/lint.out",
+		"/Users/scattaneo/workspace/textgame/game/test.py",
+		"/Users/scattaneo/workspace/textgame/play_game.py",
+		"/Users/scattaneo/workspace/textgame/game/assets/__init__.py",
+		"/Users/scattaneo/workspace/textgame/game/assets/item.py",
+		"/Users/scattaneo/workspace/textgame/game/assets/action.py",
+		"/Users/scattaneo/workspace/textgame/game/dungeon_master.py",
+		"/Users/scattaneo/workspace/textgame/game/assets/room.py",
+		"/Users/scattaneo/workspace/textgame/game/assets/npc.py",
+		"/Users/scattaneo/workspace/textgame/game/__init__.py",
+		"/Users/scattaneo/Downloads/CSRF_token_change.txt",
+		"/Users/scattaneo/Desktop/aruba/task1.tcl",
+		"/Users/scattaneo/Desktop/aruba/task2.tcl",
+		"/Users/scattaneo/workspace/textgame/game/assests/room.py",
+		"/Users/scattaneo/workspace/textgame/game/assests/action.py",
+		"/Users/scattaneo/workspace/textgame/TODO",
+		"/Users/scattaneo/workspace/textgame/game.py",
+		"/Users/scattaneo/Downloads/mudmaker/sServer.py",
+		"/Users/scattaneo/workspace/turkandlarkin/index.html",
+		"/Users/scattaneo/workspace/commute/commute.css",
+		"/Users/scattaneo/Desktop/rc10_notes.txt",
+		"/Users/scattaneo/workspace/commute/TODO.txt",
+		"/Users/scattaneo/workspace/commute/app.js",
+		"/Users/scattaneo/workspace/commute/index.html",
+		"/Users/scattaneo/Documents/qa_automation_quiz.txt",
+		"/Users/scattaneo/workspace/commute/commute.tmpl",
+		"/Users/scattaneo/Desktop/Doug_Cattaneo.txt",
+		"/Users/scattaneo/workspace/pair_suggestor.py",
+		"/Users/scattaneo/VirtualBox VMs/steveonium/steveonium.vbox",
+		"/Users/scattaneo/Desktop/fv_notes.txt",
+		"/Users/scattaneo/workspace/chrome-airwave/js/lib/underscore.js",
+		"/Users/scattaneo/workspace/devtoys/talks/sample_talk.html",
+		"/Users/scattaneo/workspace/devtoys/talks/git_talk.html",
+		"/Users/scattaneo/workspace/commute/bart_stop_times.txt",
+		"/Users/scattaneo/workspace/commute/parse_stops.py",
+		"/Users/scattaneo/workspace/commute/out.json",
+		"/Users/scattaneo/workspace/commute/SC_120NO_WK.tdl",
+		"/Users/scattaneo/workspace/commute/bart_trips.txt",
+		"/Users/scattaneo/Downloads/google_transit/stops.txt",
+		"/Users/scattaneo/Downloads/google_transit/shapes.txt",
+		"/Users/scattaneo/Downloads/google_transit/calendar.txt",
+		"/Users/scattaneo/Downloads/google_transit/calendar_dates.txt",
+		"/Users/scattaneo/Downloads/google_transit/agency.txt",
+		"/Users/scattaneo/Downloads/google_transit/feed_info.txt",
+		"/Users/scattaneo/Downloads/google_transit/fare_rules.txt",
+		"/Users/scattaneo/Downloads/google_transit/fare_attributes.txt",
+		"/Users/scattaneo/Downloads/google_transit/frequencies.txt",
+		"/Users/scattaneo/Downloads/google_transit/transfers.txt",
+		"/Users/scattaneo/Downloads/google_transit/routes.txt",
+		"/private/tmp/test_wrapper.js",
+		"/private/tmp/checked_test.html",
+		"/Users/scattaneo/Downloads/kraih-mojo-df01b48/t/mojo/base.t",
+		"/Users/scattaneo/Documents/Stephen_Cattaneo_Resume.html",
+		"/Users/scattaneo/Documents/Stephen_Cattaneo_Resume.old.html",
+		"/opt/django_root/cal/ajax_handler.py",
+		"/opt/django_root/cal/enum.py",
+		"/opt/django_root/cal/appointments.json",
+		"/opt/django_root/cal/utility.py",
+		"/opt/django_root/cal/TODO",
+		"/opt/django_root/cal/media/src/cal.js",
+		"/opt/django_root/cal/media/src/shadowevent.js",
+		"/opt/django_root/cal/media/src/event.js",
+		"/Users/scattaneo/workspace/devtoys/talks/src/steve_style.css",
+		"/Users/scattaneo/workspace/devtoys/talks/77features.html",
+		"/Users/scattaneo/workspace/devtoys/talks/scattaneo_fluent_2013_talk.html",
+		"/opt/django_root/cal/media/src/event_editor.js",
+		"/opt/django_root/cal/urls.py",
+		"/opt/django_root/cal/templates/base.html",
+		"/opt/django_root/cal/templates/index.html",
+		"/opt/django_root/cal/media/style/style.css",
+		"/Users/scattaneo/Desktop/technical_quiz.txt",
+		"/opt/django_root/cal/views.py",
+		"/Users/scattaneo/workspace/devtoys/talks/fluent_notes.txt",
+		"/Users/scattaneo/workspace/devtoys/talks/fluent notes",
+		"/Users/scattaneo/workspace/devtoys/talks/django_talk.html",
+		"/Users/scattaneo/workspace/devtoys/talks/closure_talk.html",
+		"/Users/scattaneo/workspace/devtoys/talks/python_and_django_talk.html",
+		"/Users/scattaneo/workspace/devtoys/talks/intro_to_python_talk.html",
+		"/Users/scattaneo/workspace/devtoys/talks/testing_mocha.html",
+		"/opt/django_root/job_tracker/urls.py",
+		"/opt/django_root/job_tracker/views.py",
+		"/opt/django_root/job_tracker/models.py",
+		"/Users/scattaneo/Documents/review.txt",
+		"/opt/django_root/job_tracker/media/src/GenericFilter.js",
+		"/Users/scattaneo/workspace/closure_modules/sandbox.html",
+		"/Users/scattaneo/workspace/closure_modules/style.css",
+		"/Users/scattaneo/workspace/closure_modules/app.js",
+		"/Users/scattaneo/Sites/closure/closure_sandbox.css",
+		"/Users/scattaneo/Sites/closure/goog/ui/control.js",
+		"/Users/scattaneo/Sites/closure/goog/ui/component.js",
+		"/Users/scattaneo/Sites/closure/goog/dom/forms_test.html"
+	],
+	"find":
+	{
+		"height": 33.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"/opt/django_root/portal",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"object",
+			"super",
+			"get_",
+			"eat",
+			"print",
+			"debug:",
+			"debug",
+			"debug:",
+			"dm",
+			"dm.",
+			"action",
+			"os",
+			"action",
+			"os",
+			"sys",
+			"dm",
+			"super",
+			"enterroom",
+			"flavor_text",
+			"lowe",
+			"debug",
+			"current_",
+			"current_rooo",
+			"current_rooom",
+			"jade",
+			"App",
+			"chickens",
+			"icon",
+			"favicon",
+			"self",
+			"//",
+			"pivotNewIndex",
+			"pivotIndex",
+			"//",
+			"storeIndex",
+			"getDayWidth",
+			"render",
+			"event",
+			"representedDayWidth",
+			"calcDayWidth",
+			"width",
+			"getDayWidth",
+			"calcD",
+			"i am a",
+			"undefined-all",
+			"new cal.",
+			"calcDate",
+			"pdc",
+			"vbox",
+			"getnextearl",
+			"for",
+			"extend",
+			"list",
+			"this.data",
+			"leg_pointers",
+			"Hours",
+			"getNextEarliest",
+			"getNow",
+			"<",
+			"check out a",
+			"suppose",
+			"stack",
+			"append",
+			"mail",
+			"north",
+			"\", \"",
+			"\": \"",
+			"}, {",
+			"north_b",
+			"p",
+			"6:",
+			"5:",
+			"4:",
+			"p",
+			"\", \"",
+			"}, {",
+			"\": \"",
+			"02R10",
+			"Fremont",
+			"^03",
+			"influenced",
+			"including",
+			"wireless",
+			"class=\"time_span",
+			"class\"time_span",
+			"class=\"time_span",
+			"class\"time_span",
+			"time_span",
+			"respon",
+			"<span class=\".+?\">",
+			"<p class=\".+?\">",
+			"</?p>",
+			"</span>",
+			"<li .*?>",
+			"or",
+			"evn",
+			"set",
+			"count",
+			"getDayWidth",
+			"getDayWidh",
+			"shadow",
+			"getshadow",
+			"isrealevent",
+			"this.start_",
+			"remain",
+			"getdaywidth",
+			"shadoweve",
+			"shadow",
+			"shadow_events_",
+			"shadow",
+			"Cool stuff around",
+			"calcday",
+			"getDayWidth",
+			"cal_event",
+			"shadwow_events",
+			"calc",
+			"getDayW",
+			"eventeditor",
+			"eventtype",
+			"xhrio",
+			"//////",
+			"getId",
+			"getDbId",
+			"e.",
+			"render",
+			"gettd",
+			"get_events",
+			".y"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"pigs",
+			"  this.route(\"chickens\", { path: \"/chickens\" });",
+			"#",
+			"pivot_new_index",
+			"pivot_index",
+			"#",
+			"stored_index",
+			"Minutes",
+			"&lt;",
+			"push",
+			"\",\"",
+			"\":\"",
+			"},{",
+			"",
+			"18:",
+			"17:",
+			"16:",
+			"",
+			"\",\"",
+			"},{",
+			"\":\"",
+			"class=\"time_span",
+			"",
+			"<li>",
+			"get",
+			"Cool Stuff Around",
+			"se",
+			"cal_event.",
+			".top",
+			"box.",
+			"&gt;",
+			"&lt;",
+			"&gt;",
+			"&lt;",
+			"data",
+			"ajax_handler",
+			"pdf",
+			"opt_date",
+			"this",
+			"item",
+			"this.randInt",
+			"this.randStr",
+			"randInt",
+			"=",
+			"'href': '#'",
+			"href",
+			"filteredModel",
+			"metaData",
+			"TotalTable",
+			"model",
+			"stripeRows",
+			"'id'",
+			"   ",
+			"awms.table.Table",
+			"awms.Table",
+			"pretty_type",
+			"'",
+			"",
+			"'"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "game/dungeon_master.py",
+					"settings":
+					{
+						"buffer_size": 2029,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1437,
+								1437
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "game/assets/action.py",
+					"settings":
+					{
+						"buffer_size": 3486,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2095,
+								2097
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1011.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "game/assets/base.py",
+					"settings":
+					{
+						"buffer_size": 4032,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3201,
+								3201
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1359.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "game/assets/room.py",
+					"settings":
+					{
+						"buffer_size": 1257,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								333,
+								338
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "game/assets/action_test.py",
+					"settings":
+					{
+						"buffer_size": 874,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								68,
+								76
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "game/assets/item.py",
+					"settings":
+					{
+						"buffer_size": 432,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								22,
+								22
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 32.0
+	},
+	"input":
+	{
+		"height": 27.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 218.0
+	},
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				"awms/SimpleTable.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 183.0,
+	"status_bar_visible": true
+}
