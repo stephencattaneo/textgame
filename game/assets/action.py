@@ -1,4 +1,3 @@
-
 from pprint import pprint
 import re
 from base import Action, ItemAction, DebugAction
@@ -114,15 +113,16 @@ class Eat(ItemAction):
   def command():
     return ['eat']
 
-
-
-
 class GoTo(DebugAction):
   @staticmethod
   def command():
     return ['goto']
 
   def do(self, args=None, **kwargs):
+    if len(args) < 2:
+      self.help_message()
+      return
+
     room_name = args[1].lower()
     try:
       room = self.dm.all_rooms[room_name]
@@ -136,9 +136,13 @@ class GoTo(DebugAction):
       EnterRoom(dm=self.dm).do(room=room(**room_args))
     except (KeyError):
       self.dm.out("Unknown room: '%s'." % room_name)
-      self.dm.out("Possible rooms:")
-      for rm in self.dm.all_rooms.keys():
-        self.dm.out("* %s" % rm)
+      self.help_message()
+
+  def help_message(self):
+    self.dm.out("Possible rooms:")
+    for rm in self.dm.all_rooms.keys():
+      self.dm.out("* %s" % rm)
+
 
 class RoomInfo(DebugAction):
   @staticmethod

@@ -5,12 +5,10 @@ class Base(object):
     self.dm = dm
 
 class Room(Base):
-  items = []
   can_be_random = True
   special_exit = None
   name = 'the same old room'
   flavor_text = 'just another room'
-  npcs = []
   can_have_items = True
   chance = 3 #  where 1 in chance of items
   visited = False
@@ -18,6 +16,8 @@ class Room(Base):
   def __init__(self, dm, **kwargs):
     super(Room, self).__init__(dm, **kwargs)
     self.chance = int(kwargs['chance']) if 'chance' in kwargs else self.chance
+    self.npcs = []
+    self.items = []
 
   def action(self):
     self.dm.out(self.flavor_text)
@@ -121,6 +121,9 @@ class Action(Base):
 
 class ItemAction(Action):
   def do(self, args=None, **kwargs):
+    if len(args) < 2:
+      self.dm.out('no such item.')
+      return
     item_name = args[1]
 
     item = None
