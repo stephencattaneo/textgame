@@ -29,6 +29,12 @@ class GoToAction(BaseTestCase):
     expected = re.compile('''Unknown room: 'asdf'\.\s+Possible rooms:\s+\* kittens''')
     self.assertTrue(expected.search(self.ostream.getvalue()))
 
+class InventoryAction(BaseTestCase):
+  def test_empty_inv(self):
+    inv = action.Inventory(dm=self.dm)
+    inv.do(['inventory'])
+    self.assertEqual(self.ostream.getvalue(), 'You dont have anything')
+
 
 if __name__ == '__main__':
     u.main()

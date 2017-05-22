@@ -3,6 +3,7 @@ from random import randint
 import sys
 
 from assets import *
+from assets import base
 
 class ExitGame(BaseException):
   pass
@@ -12,6 +13,7 @@ class DungeonMaster(object):
   possible_rooms = []
   all_rooms = {}
   items = {}
+  craftable_items = {}
   total_item_weight = 0
   visited_rooms = []
   inventory = []
@@ -36,10 +38,14 @@ class DungeonMaster(object):
     self.cache_asset(room, append_rooms)
 
     # cache the items.
-    def append_items(self, obj):
-      self.items[obj.__name__.lower()] = obj
-      self.total_item_weight = self.total_item_weight + obj.spawn_weight
-    self.cache_asset(item, append_items)
+    # def append_items(self, obj):
+    #   obj_name = obj.__name__.lower()
+    #   self.items[obj_name] = obj
+    #   if isinstance(obj, base.Crafted):
+    #     self.craftable_items[obj_name] = obj
+    #   self.total_item_weight = self.total_item_weight + obj.spawn_weight
+    # self.cache_asset(item, append_items)
+
 
 
   def start(self):

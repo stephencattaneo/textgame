@@ -65,6 +65,7 @@ class Room(Base):
       T = 0
       for item_name in self.dm.items:
         I = self.dm.items[item_name]
+        if I.spawn_weight == 0: continue
         T = T + I.spawn_weight
         if T > R:
           self.items.append(I(dm=self.dm))
@@ -82,7 +83,6 @@ class Room(Base):
 
 
 class Item(Base):
-  attributes = {}
   spawn_weight = 0
 
   def __init__(self, dm, **kwargs):
@@ -104,6 +104,15 @@ class Item(Base):
   def eat(self, **kwargs):
     self.noop()
 
+class Edible(Item):
+  def eat(self, **kwargs):
+    self.dm.out('You eat the %s. Mmmmmmmmmm sooo good.' % self.__class__.__name__)
+
+class Crafted(Item):
+  pass
+
+class Weapon(Item):
+  pass
 
 class Action(Base):
   debug_only = False
