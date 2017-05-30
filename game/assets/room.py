@@ -40,7 +40,7 @@ class Gym(Room):
 
 class Server(Room):
   name = 'server room.'
-  flavor_text = 'computers and wires everywhere, the sound of whiring fans fills the air.'
+  flavor_text = 'computers and wires everywhere, the sound of whiring fans is deafening.'
 
 class Meeting(Room):
   name = 'a meeting room.'

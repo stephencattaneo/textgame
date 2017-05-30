@@ -1,4 +1,6 @@
 from random import randint
+from pprint import pprint
+import re
 
 class Base(object):
   def __init__(self, dm, **kwargs):

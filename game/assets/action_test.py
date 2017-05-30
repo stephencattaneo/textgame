@@ -33,8 +33,8 @@ class InventoryAction(BaseTestCase):
   def test_empty_inv(self):
     inv = action.Inventory(dm=self.dm)
     inv.do(['inventory'])
-    self.assertEqual(self.ostream.getvalue(), 'You dont have anything')
+    self.assertEqual(self.ostream.getvalue(), 'You dont have anything\n')
 
 
 if __name__ == '__main__':
-    u.main()
+  u.main()

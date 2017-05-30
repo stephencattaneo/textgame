@@ -35,19 +35,25 @@ class Inventory(Action):
     return ['inventory']
 
   def do(self, args=None, **kwargs):
-    self.dm.out("Things in your inventory:")
-    for i in xrange(str(self.dm.inventory)):
-      self.dm.out(
-        '%d) %s' % (i, str(self.dm.inventory[i]))
-      )
+    if len(self.dm.inventory):
+      self.dm.out("Things in your inventory:")
+      for i in range(len(self.dm.inventory)):
+        self.dm.out(
+          '%d) %s' % (i, str(self.dm.inventory[i]))
+        )
+    else:
+      self.dm.out('You dont have anything')
 
 class Talk(Action):
   @staticmethod
   def command():
     return ['talk']
 
-  def do(self, args=None, **kwargs):
-    target = args[1]
+  def do(self, args=[], **kwargs):
+    if len(args) < 2:
+      target = 'me'
+    else:
+      target = args[1]
 
     if target == 'me':
       self.dm.out('You talk to yourself.  Crazy Person.')
@@ -57,7 +63,7 @@ class Talk(Action):
       if npc:
         npc.talk()
       else:
-        '''There is no one by that name'''
+        self.dm.out('''There is no one by that name''')
 
 
 

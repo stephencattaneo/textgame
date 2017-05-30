@@ -28,3 +28,6 @@ class Lint(u.TestCase):
       print('\n****** YOU CAN CHECK /tmp/lint.out FOR LINTER DETAILS. ******')
 
     self.assertFalse(ret)
+
+if __name__ == '__main__':
+  u.main()

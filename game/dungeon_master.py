@@ -38,13 +38,13 @@ class DungeonMaster(object):
     self.cache_asset(room, append_rooms)
 
     # cache the items.
-    # def append_items(self, obj):
-    #   obj_name = obj.__name__.lower()
-    #   self.items[obj_name] = obj
-    #   if isinstance(obj, base.Crafted):
-    #     self.craftable_items[obj_name] = obj
-    #   self.total_item_weight = self.total_item_weight + obj.spawn_weight
-    # self.cache_asset(item, append_items)
+    def append_items(self, obj):
+      obj_name = obj.__name__.lower()
+      self.items[obj_name] = obj
+      if isinstance(obj, base.Crafted):
+        self.craftable_items[obj_name] = obj
+      self.total_item_weight = self.total_item_weight + obj.spawn_weight
+    self.cache_asset(item, append_items)
 
 
 
