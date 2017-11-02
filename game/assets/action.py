@@ -2,12 +2,12 @@ from pprint import pprint
 import re
 from base import Action, ItemAction, DebugAction
 
-class EnterRoom(Action):
+class Move(Action):
   @staticmethod
   def command():
     return ['north', 'south', 'west', 'east'] #XXX This should be dictated by the current room
 
-  def do(self, args=None, **kwargs):
+  def do(self, args=[], **kwargs):
     if 'room' in kwargs:
       room = kwargs['room']
     elif self.dm.current_room().should_use_special_exit():
@@ -39,7 +39,7 @@ class Inventory(Action):
       self.dm.out("Things in your inventory:")
       for i in range(len(self.dm.inventory)):
         self.dm.out(
-          '%d) %s' % (i, str(self.dm.inventory[i]))
+          '%d) %s' % (i + 1, str(self.dm.inventory[i]))
         )
     else:
       self.dm.out('You dont have anything')
@@ -139,7 +139,7 @@ class GoTo(DebugAction):
       for i in xrange(0, len(args[2:]), 2):
         room_args[args[2+i]] = args[3+i]
 
-      EnterRoom(dm=self.dm).do(room=room(**room_args))
+      Move(dm=self.dm).do(room=room(**room_args))
     except (KeyError):
       self.dm.out("Unknown room: '%s'." % room_name)
       self.help_message()

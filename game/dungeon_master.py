@@ -15,7 +15,7 @@ class DungeonMaster(object):
   items = {}
   craftable_items = {}
   total_item_weight = 0
-  visited_rooms = []
+  room_grid = [[]]
   inventory = []
 
   def __init__(self, debug_mode=False, out_stream=sys.stdout):
@@ -50,7 +50,7 @@ class DungeonMaster(object):
 
   def start(self):
     # enter the lobby to start the game.
-    action.EnterRoom(dm=self).do(room=room.Lobby(dm=self))
+    action.Move(dm=self).do(room=room.Lobby(dm=self), pos=[0,0])
 
 
   def do_action(self, cmd):
@@ -66,13 +66,15 @@ class DungeonMaster(object):
     action.do(cmd)
 
 
-  def room_change(self, new_room):
+  def room_change(self, new_room, pos):
     self.visited_rooms.append(new_room)
 
 
   def current_room(self):
-    return self.visited_rooms[-1]
+    return self._current_room
 
+  def room_at_position(self, pos):
+    return self.visited_rooms[pos[0]][pos[1]]
 
   def random_room(self):
     return self.possible_rooms[randint(0, len(self.possible_rooms) - 1)](dm=self)

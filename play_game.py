@@ -14,12 +14,12 @@ class Game(object):
       try:
         cmd = raw_input('> ')
         print('\n')
-        if self.DEBUG_MODE and cmd == 'quit': 
+        if self.DEBUG_MODE and cmd == 'quit':
           print('Goodbye. (debug quit)')
           raise dungeon_master.ExitGame
 
         dm.do_action(cmd)
-      
+
       except (EOFError, KeyboardInterrupt):
         if self.DEBUG_MODE:
           print('exit game!')
